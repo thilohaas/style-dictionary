@@ -21,8 +21,11 @@
   ],
   "type": "module",
   "exports": {
-    ".": "./index.js",
-    "types": "./types/index.d.ts"
+    ".": {
+      "default": "./index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./create-dictionary": "./lib/utils/createDictionary.js"
   },
   "bin": {
     "style-dictionary": "./bin/style-dictionary"
