@@ -12,8 +12,6 @@
  */
 
 // TODO: Add changelog entry about removed deprecated features
-// import chalk from 'chalk';
-// import GroupMessages from './lib/utils/groupMessages';
 import extend from './lib/extend.js';
 import transform from './lib/common/transforms.js';
 import transformGroup from './lib/common/transformGroups.js';
@@ -24,7 +22,6 @@ import filter from './lib/common/filters.js';
 import registerTransform from './lib/register/transform.js';
 import registerTransformGroup from './lib/register/transformGroup.js';
 import registerFormat from './lib/register/format.js';
-import registerTemplate from './lib/register/template.js';
 import registerAction from './lib/register/action.js';
 import registerFilter from './lib/register/filter.js';
 import registerParser from './lib/register/parser.js';
@@ -83,7 +80,6 @@ export default {
   registerTransform,
   registerTransformGroup,
   registerFormat,
-  registerTemplate,
   registerAction,
   registerFilter,
   registerParser,
