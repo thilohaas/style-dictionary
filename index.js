@@ -40,7 +40,7 @@ import cleanAllPlatforms from './lib/cleanAllPlatforms.js';
 export let fs =
   typeof window === 'object'
     ? (await import('@bundled-es-modules/memfs')).default
-    : (await import('node:fs')).default;
+    : (await import(/** webpackIgnore: true */ 'node:fs')).default;
 
 // since ES modules exports are read-only, use a setter
 export const setFs = (_fs) => {
