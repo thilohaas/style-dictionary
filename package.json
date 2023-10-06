@@ -23,6 +23,7 @@
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
+      "node": "./index-node.js",
       "default": "./index.js"
     },
     "./create-dictionary": "./lib/utils/createDictionary.js"
