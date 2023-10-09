@@ -44,13 +44,15 @@
     "types"
   ],
   "scripts": {
+    "format": "run-p format:*",
     "format:eslint": "eslint --file index.js \"lib/**/*.js\" \"__tests__/**/*.js\" --fix",
     "format:prettier": "prettier \"**/*.{js,md}\" \"package.json\" --write",
+    "lint": "run-p lint:*",
     "lint:eslint": "eslint --fix index.js \"lib/**/*.js\" \"__tests__/**/*.js\"",
     "lint:prettier": "prettier \"**/*.{js,md}\" \"package.json\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
-    "test": "npm run test-types && run-p lint:* && jest --runInBand --silent --coverage",
-    "test-types": "tsd",
-    "test-watch": "npm run test-types && run-p lint:* && jest --runInBand --watch",
+    "test": "run-p test:*",
+    "test:unit": "jest --runInBand --silent --coverage",
+    "test:types": "tsd",
     "generate-docs": "node ./scripts/generateDocs.js",
     "serve-docs": "docsify serve docs -p 3000 -P 12345",
     "install-cli": "npm install -g $(npm pack)",
@@ -130,7 +132,8 @@
     "Yuliya Baran <baranyu@amazon.com>",
     "Charles Dorner <dornerc@amazon.com>",
     "Dustin Boudreau <boudrd@amazon.com>",
-    "Danny Banks <djb@amazon.com>"
+    "Danny Banks <djb@amazon.com>",
+    "Joren Broekema <joren.broekema@gmail.com>"
   ],
   "homepage": "https://github.com/amzn/style-dictionary",
   "dependencies": {
